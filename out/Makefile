@@ -149,6 +149,39 @@ a.out.exp/fast:
 	$(MAKE) -f CMakeFiles/a.out.exp.dir/build.make CMakeFiles/a.out.exp.dir/build
 .PHONY : a.out.exp/fast
 
+app/avltree.o: app/avltree.cpp.o
+
+.PHONY : app/avltree.o
+
+# target to build an object file
+app/avltree.cpp.o:
+	$(MAKE) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/app/avltree.cpp.o
+	$(MAKE) -f CMakeFiles/a.out.app.dir/build.make CMakeFiles/a.out.app.dir/app/avltree.cpp.o
+	$(MAKE) -f CMakeFiles/a.out.exp.dir/build.make CMakeFiles/a.out.exp.dir/app/avltree.cpp.o
+.PHONY : app/avltree.cpp.o
+
+app/avltree.i: app/avltree.cpp.i
+
+.PHONY : app/avltree.i
+
+# target to preprocess a source file
+app/avltree.cpp.i:
+	$(MAKE) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/app/avltree.cpp.i
+	$(MAKE) -f CMakeFiles/a.out.app.dir/build.make CMakeFiles/a.out.app.dir/app/avltree.cpp.i
+	$(MAKE) -f CMakeFiles/a.out.exp.dir/build.make CMakeFiles/a.out.exp.dir/app/avltree.cpp.i
+.PHONY : app/avltree.cpp.i
+
+app/avltree.s: app/avltree.cpp.s
+
+.PHONY : app/avltree.s
+
+# target to generate assembly for a file
+app/avltree.cpp.s:
+	$(MAKE) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/app/avltree.cpp.s
+	$(MAKE) -f CMakeFiles/a.out.app.dir/build.make CMakeFiles/a.out.app.dir/app/avltree.cpp.s
+	$(MAKE) -f CMakeFiles/a.out.exp.dir/build.make CMakeFiles/a.out.exp.dir/app/avltree.cpp.s
+.PHONY : app/avltree.cpp.s
+
 app/main.o: app/main.cpp.o
 
 .PHONY : app/main.o
@@ -175,39 +208,6 @@ app/main.s: app/main.cpp.s
 app/main.cpp.s:
 	$(MAKE) -f CMakeFiles/a.out.app.dir/build.make CMakeFiles/a.out.app.dir/app/main.cpp.s
 .PHONY : app/main.cpp.s
-
-app/proj3.o: app/proj3.cpp.o
-
-.PHONY : app/proj3.o
-
-# target to build an object file
-app/proj3.cpp.o:
-	$(MAKE) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/app/proj3.cpp.o
-	$(MAKE) -f CMakeFiles/a.out.app.dir/build.make CMakeFiles/a.out.app.dir/app/proj3.cpp.o
-	$(MAKE) -f CMakeFiles/a.out.exp.dir/build.make CMakeFiles/a.out.exp.dir/app/proj3.cpp.o
-.PHONY : app/proj3.cpp.o
-
-app/proj3.i: app/proj3.cpp.i
-
-.PHONY : app/proj3.i
-
-# target to preprocess a source file
-app/proj3.cpp.i:
-	$(MAKE) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/app/proj3.cpp.i
-	$(MAKE) -f CMakeFiles/a.out.app.dir/build.make CMakeFiles/a.out.app.dir/app/proj3.cpp.i
-	$(MAKE) -f CMakeFiles/a.out.exp.dir/build.make CMakeFiles/a.out.exp.dir/app/proj3.cpp.i
-.PHONY : app/proj3.cpp.i
-
-app/proj3.s: app/proj3.cpp.s
-
-.PHONY : app/proj3.s
-
-# target to generate assembly for a file
-app/proj3.cpp.s:
-	$(MAKE) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/app/proj3.cpp.s
-	$(MAKE) -f CMakeFiles/a.out.app.dir/build.make CMakeFiles/a.out.app.dir/app/proj3.cpp.s
-	$(MAKE) -f CMakeFiles/a.out.exp.dir/build.make CMakeFiles/a.out.exp.dir/app/proj3.cpp.s
-.PHONY : app/proj3.cpp.s
 
 exp/expmain.o: exp/expmain.cpp.o
 
@@ -301,12 +301,12 @@ help:
 	@echo "... a.out.gtest"
 	@echo "... a.out.app"
 	@echo "... a.out.exp"
+	@echo "... app/avltree.o"
+	@echo "... app/avltree.i"
+	@echo "... app/avltree.s"
 	@echo "... app/main.o"
 	@echo "... app/main.i"
 	@echo "... app/main.s"
-	@echo "... app/proj3.o"
-	@echo "... app/proj3.i"
-	@echo "... app/proj3.s"
 	@echo "... exp/expmain.o"
 	@echo "... exp/expmain.i"
 	@echo "... exp/expmain.s"

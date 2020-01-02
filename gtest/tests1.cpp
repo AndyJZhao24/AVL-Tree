@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
 #include "MyAVLTree.hpp"
-#include "proj3.hpp"
+#include "avltree.hpp"
 #include <string>
 #include <sstream>
 #include <vector>
@@ -8,25 +8,7 @@
 namespace{
 
 
-// NOTE:  these are not intended as exhaustive tests.
-// This should get you started testing.
-
-// The four tests marked "CheckPoint" are going to be run
-// on your submission for the checkpoint code.
-// This is worth 25% of your grade on the assignment
-// and is due at the time marked "checkpoint" (Monday Nov 11, 11:59PM)
-
-
-// None of the "checkpoint" tests require you to have
-// AVL functionality OR the counting of words.
-// Implementing your tree as a plain binary search
-// tree is more than enough to pass these tests.
-
-// Of course, you are expected to implement AVL functionality
-// for the full project.
-
-
-TEST(CheckPoint, CheckPoint_FindTheRoot)
+TEST(BasicTreeFunctions, BasicTreeFunctions_FindTheRoot)
 {
 	MyAVLTree<int, std::string> tree;
 	tree.insert(5, "foo");
@@ -34,7 +16,7 @@ TEST(CheckPoint, CheckPoint_FindTheRoot)
 	EXPECT_TRUE( tree.contains(5) );
 }
 
-TEST(CheckPoint, CheckPoint_FindOneHop)
+TEST(BasicTreeFunctions, BasicTreeFunctions_FindOneHop)
 {
 	MyAVLTree<int, std::string> tree;
 	tree.insert(5, "foo");
@@ -43,7 +25,7 @@ TEST(CheckPoint, CheckPoint_FindOneHop)
 	EXPECT_TRUE( tree.contains(10) );
 }
 
-TEST(CheckPoint, CheckPoint_FindTwoHops)
+TEST(BasicTreeFunctions, BasicTreeFunctions_FindTwoHops)
 {
 	MyAVLTree<int, std::string> tree;
 	tree.insert(5, "foo");
@@ -56,7 +38,7 @@ TEST(CheckPoint, CheckPoint_FindTwoHops)
 
 
 
-TEST(CheckPoint, CheckPoint_Add5)
+TEST(BasicTreeFunctions, BasicTreeFunctions_Add5)
 {
 	MyAVLTree<int, std::string> tree;
 	tree.insert(5, "foo");
@@ -70,7 +52,7 @@ TEST(CheckPoint, CheckPoint_Add5)
 
 
 
-TEST(PostCheckPoint, InOrderTraversal)
+TEST(FullImplementation, InOrderTraversal)
 {
 	MyAVLTree<int, std::string> tree;
 	tree.insert(5, "foo");
@@ -86,7 +68,7 @@ TEST(PostCheckPoint, InOrderTraversal)
 
 
 
-TEST(PostCheckPoint, JackSparrow)
+TEST(FullImplementation, JackSparrow)
 {
 	std::string quote = "I'm dishonest, and a dishonest man you can ";
 	quote += "always trust to be dishonest. Honestly. It's the honest ";

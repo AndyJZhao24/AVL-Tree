@@ -14,7 +14,7 @@ string
 vector
 -
 
-../app/proj3.hpp
+../app/avltree.hpp
 iostream
 -
 MyAVLTree.hpp
@@ -32,7 +32,7 @@ string
 vector
 -
 
-/home/ics46b/projects/proj3/app/proj3.cpp
+/home/ics46b/projects/proj3/app/avltree.cpp
 fstream
 -
 iostream
@@ -43,10 +43,10 @@ string
 -
 sstream
 -
-proj3.hpp
-/home/ics46b/projects/proj3/app/proj3.hpp
+avltree.hpp
+/home/ics46b/projects/proj3/app/avltree.hpp
 
-/home/ics46b/projects/proj3/app/proj3.hpp
+/home/ics46b/projects/proj3/app/avltree.hpp
 iostream
 -
 MyAVLTree.hpp
@@ -65,8 +65,8 @@ gtest/gtest.h
 /home/ics46b/projects/proj3/gtest/gtest/gtest.h
 MyAVLTree.hpp
 /home/ics46b/projects/proj3/gtest/MyAVLTree.hpp
-proj3.hpp
-/home/ics46b/projects/proj3/gtest/proj3.hpp
+avltree.hpp
+/home/ics46b/projects/proj3/gtest/avltree.hpp
 string
 -
 sstream

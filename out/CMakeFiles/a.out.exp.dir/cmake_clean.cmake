@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/a.out.exp.dir/exp/expmain.cpp.o"
-  "CMakeFiles/a.out.exp.dir/app/proj3.cpp.o"
+  "CMakeFiles/a.out.exp.dir/app/avltree.cpp.o"
   "bin/a.out.exp.pdb"
   "bin/a.out.exp"
 )

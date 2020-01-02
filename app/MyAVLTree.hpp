@@ -1,5 +1,5 @@
-#ifndef __PROJ_THREE_AVL_HPP
-#define __PROJ_THREE_AVL_HPP
+#ifndef __MY_AVL_TREE_HPP
+#define __MY_AVL_TREE_HPP
 
 #include "runtimeexcept.hpp"
 #include <string>
@@ -32,8 +32,6 @@ template<typename Key, typename Value>
 class MyAVLTree
 {
 private:
-	// fill in private member data here
-	// If you need to declare private functions, do so here too.
 	Node<Key, Value>* root; //Keeps track of root node.
 	int counter; //Counter of how many nodes are in the tree
 	int updateHeight(Node<Key,Value>* n); //Updates the height of every node in the tree
@@ -47,14 +45,6 @@ private:
 public:
 	MyAVLTree();
 
-	// In general, a copy constructor and assignment operator
-	// are good things to have.
-	// For ICS 46, Fall 2019, I am not requiring these. 
-	//	MyAVLTree(const MyAVLTree & st);
-	//	MyAVLTree & operator=(const MyAVLTree & st);
-
-
-	// The destructor is, however, required. 
 	~MyAVLTree()
 	{
 		delete root; //Calls the destructor for root node, since node has a destructor, it will also destruct every node in the tree(similar to recursion).
@@ -80,16 +70,8 @@ public:
 	// Inserts the given key-value pair into 
 	// the tree and performs the AVL re-balance
 	// operation, as described in lecture. 
-	// If the key already exists in the tree, 
-	// you may do as you please (no test cases in
-	// the grading script will deal with this situation)
 	void insert(const Key & k, const Value & v);
 
-	// in general, a "remove" function would be here
-	// It's a little trickier with an AVL tree
-	// and I am not requiring it for Fall 2019's ICS 46.
-	// You should still read about the remove operation
-	// in your textbook. 
 
 	// The following three functions all return
 	// the set of keys in the tree as a standard vector.
@@ -225,13 +207,13 @@ void MyAVLTree<Key, Value>::rebalance(Node<Key, Value>* z)
 template<typename Key, typename Value>
 size_t MyAVLTree<Key, Value>::size() const noexcept
 {
-	return counter; // stub
+	return counter;
 }
 
 template<typename Key, typename Value>
 bool MyAVLTree<Key, Value>::isEmpty() const noexcept
 {
-	return counter == 0; // stub
+	return counter == 0;
 }
 
 
@@ -350,7 +332,7 @@ void MyAVLTree<Key, Value>::insert(const Key & k, const Value & v)
 		}
 
 		updateHeight(root); //Updates Height of all nodes in the tree.
-		//v This  is where rebalancing happens
+		//This  is where rebalancing happens
 		rebalance(insertedNode); //Rebalance, passing the node that was just inserted.
 		updateHeight(root); //After rebalancing, update the heights of all nodes again.
 	}
